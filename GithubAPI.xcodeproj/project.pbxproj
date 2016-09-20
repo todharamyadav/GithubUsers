@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		67D51A391D91A34200D5A946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D51A381D91A34200D5A946 /* AppDelegate.swift */; };
 		67D51A3B1D91A34200D5A946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D51A3A1D91A34200D5A946 /* ViewController.swift */; };
-		67D51A3E1D91A34200D5A946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D51A3C1D91A34200D5A946 /* Main.storyboard */; };
 		67D51A411D91A34200D5A946 /* GithubAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67D51A3F1D91A34200D5A946 /* GithubAPI.xcdatamodeld */; };
 		67D51A431D91A34200D5A946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67D51A421D91A34200D5A946 /* Assets.xcassets */; };
 		67D51A461D91A34200D5A946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D51A441D91A34200D5A946 /* LaunchScreen.storyboard */; };
+		67D51A4E1D91ABBF00D5A946 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D51A4D1D91ABBF00D5A946 /* ResultTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67D51A351D91A34200D5A946 /* GithubAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D51A381D91A34200D5A946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67D51A3A1D91A34200D5A946 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67D51A3D1D91A34200D5A946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67D51A401D91A34200D5A946 /* GithubAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubAPI.xcdatamodel; sourceTree = "<group>"; };
 		67D51A421D91A34200D5A946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67D51A451D91A34200D5A946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67D51A471D91A34200D5A946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67D51A4D1D91ABBF00D5A946 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			children = (
 				67D51A381D91A34200D5A946 /* AppDelegate.swift */,
 				67D51A3A1D91A34200D5A946 /* ViewController.swift */,
-				67D51A3C1D91A34200D5A946 /* Main.storyboard */,
 				67D51A421D91A34200D5A946 /* Assets.xcassets */,
 				67D51A441D91A34200D5A946 /* LaunchScreen.storyboard */,
 				67D51A471D91A34200D5A946 /* Info.plist */,
 				67D51A3F1D91A34200D5A946 /* GithubAPI.xcdatamodeld */,
+				67D51A4D1D91ABBF00D5A946 /* ResultTableViewController.swift */,
 			);
 			path = GithubAPI;
 			sourceTree = "<group>";
@@ -127,7 +127,6 @@
 			files = (
 				67D51A461D91A34200D5A946 /* LaunchScreen.storyboard in Resources */,
 				67D51A431D91A34200D5A946 /* Assets.xcassets in Resources */,
-				67D51A3E1D91A34200D5A946 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D51A4E1D91ABBF00D5A946 /* ResultTableViewController.swift in Sources */,
 				67D51A411D91A34200D5A946 /* GithubAPI.xcdatamodeld in Sources */,
 				67D51A3B1D91A34200D5A946 /* ViewController.swift in Sources */,
 				67D51A391D91A34200D5A946 /* AppDelegate.swift in Sources */,
@@ -147,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67D51A3C1D91A34200D5A946 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67D51A3D1D91A34200D5A946 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		67D51A441D91A34200D5A946 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
