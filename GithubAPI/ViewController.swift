@@ -13,8 +13,7 @@ class HomeViewController: UIViewController {
     let searchTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter Name"
-        textField.layer.borderColor = UIColor.blackColor().CGColor
-        textField.layer.borderWidth = 0.5
+        textField.borderStyle = .RoundedRect
         textField.layer.masksToBounds = true
         return textField
     }()
@@ -30,10 +29,25 @@ class HomeViewController: UIViewController {
     }()
     
     func searchButtonClicked(){
-        let controller = ResultTableViewController()
-        controller.name = searchTextField.text
-        let navController = UINavigationController(rootViewController: controller)
-        self.presentViewController(navController, animated: true, completion: nil)
+        if searchTextField.text!.isEmpty{
+            let alert = UIAlertController(title: "Error", message: "Plese Enter name", preferredStyle: .Alert)
+            let ok = UIAlertAction(title: "OK", style: .Default, handler: {(action: UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action: UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }else{
+            let controller = ResultTableViewController()
+            controller.name = searchTextField.text
+            let navController = UINavigationController(rootViewController: controller)
+            self.presentViewController(navController, animated: true, completion: nil)
+        }
+        
+        
     }
     
     override func viewDidLoad() {

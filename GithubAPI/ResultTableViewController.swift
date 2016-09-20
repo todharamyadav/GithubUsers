@@ -19,10 +19,13 @@ class ResultTableViewController: UITableViewController {
         view.backgroundColor = UIColor.whiteColor()
         navigationItem.title = name
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        let url = "https://api.github.com/users/\(name)/repos"
         
-        getContactListJSON(url)
-        
+       if let userName = name{
+            print(userName)
+            let url = "https://api.github.com/users/\(userName)/repos"
+            print(url)
+            getContactListJSON(url)
+        }
     }
     
     func dismiss(){
@@ -63,6 +66,17 @@ class ResultTableViewController: UITableViewController {
             })
             networkTask.resume()
 
+        }else{
+            let alert = UIAlertController(title: "Error", message: "No repository found or User dont exist", preferredStyle: .Alert)
+            let ok = UIAlertAction(title: "OK", style: .Default, handler: {(action: UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action: UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
 }
